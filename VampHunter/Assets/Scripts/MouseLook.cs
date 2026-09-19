@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void LookAt(Vector3 target)
     {
-        
+        float lookAngle = AngleBetweenTwoPoints(transform.position, target);
+
+        transform.eulerAngles = new Vector3(0, 0, lookAngle);
     }
 
-    // Update is called once per frame
-    void Update()
+    private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
-        
+        return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }
 }
