@@ -11,16 +11,19 @@ public class PlayerShooting : MonoBehaviour {
     public int currentAmmo; 
     public bool isReloading = false; 
     public int reloadTime = 2; // reload time in seconds
+    private PlayerHealth playerHealth; //for not letting player shoot when dead
 
     public TextMeshProUGUI ammoText;
 
     private void Start() {
+        playerHealth = GetComponent<PlayerHealth>();
         currentAmmo = chamberSlots;
         UpdateAmmoText();
     }
 
 
     private void Update() {
+        if (playerHealth.isDead) return;
         if (Mouse.current.leftButton.wasPressedThisFrame) { // Left Mouse for shooting
             Shoot();
         }
