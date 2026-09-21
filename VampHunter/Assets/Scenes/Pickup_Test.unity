@@ -644,8 +644,8 @@ GameObject:
   - component: {fileID: 927254112}
   - component: {fileID: 927254111}
   - component: {fileID: 927254110}
-  - component: {fileID: 927254117}
   - component: {fileID: 927254118}
+  - component: {fileID: 927254119}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -823,18 +823,6 @@ Transform:
   - {fileID: 1209978614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &927254117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927254109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15aba0f438840e748abca210e1545300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRotation
 --- !u!114 &927254118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,6 +840,19 @@ MonoBehaviour:
   respawnPoint: {fileID: 1910748053}
   respawnDelay: 5
   healthText: {fileID: 1259551786}
+  isDead: 0
+--- !u!114 &927254119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927254109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cb70ec200d62c4a886c8c417e853fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRotation
 --- !u!1 &1034795241
 GameObject:
   m_ObjectHideFlags: 0
