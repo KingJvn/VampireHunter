@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
+        //playerHealth = GetComponent<PlayerHealth>();
     }
 
     private void Awake()
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        if (playerHealth.isDead) return;
+        //if (playerHealth.isDead) return;
         movementInput = value.Get<Vector2>();
     }
 
