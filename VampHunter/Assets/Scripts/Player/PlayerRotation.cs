@@ -11,20 +11,20 @@ public class PlayerRotation : Rotator
     }
     private void Update()
     {
-        RotateToward(mouseWorldPosition); //rotates player every frame to independently from the mouse movement. Stops player from pausing when not finished rotating
-    }
-    private void OnLook(InputAction.CallbackContext context)
-    {
-        Vector2 screenPos = context.ReadValue<Vector2>();
+        Vector2 screenPos = look.action.ReadValue<Vector2>();
+
         mouseWorldPosition = Camera.main.ScreenToWorldPoint(screenPos);
+        mouseWorldPosition.z = transform.position.z;
+
+        RotateToward(mouseWorldPosition); //rotates player every frame to independently from the mouse movement. Stops player from pausing when not finished rotating
     }
 
     private void OnEnable()
     {
-        look.action.performed += OnLook;
+        look.action.Enable();
     }
     private void OnDisable()
     {
-        look.action.performed -= OnLook;
+        look.action.Disable();
     }
 }

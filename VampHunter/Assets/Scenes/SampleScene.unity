@@ -1064,7 +1064,7 @@ MonoBehaviour:
     ScreenPosition: {x: 0, y: 0}
     DeadZone:
       Enabled: 0
-      Size: {x: 0.2, y: 0.2}
+      Size: {x: 0.05, y: 0.08}
     HardLimits:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
@@ -1687,14 +1687,6 @@ PrefabInstance:
     - target: {fileID: 177631233148916022, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353683278646468107, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353683278646468107, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3575580123826057024, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
       propertyPath: equippedWeapon
