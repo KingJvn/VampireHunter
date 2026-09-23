@@ -13,7 +13,7 @@ public class MeleeWeapon : Weapon
     }
     public override void Attack()
     {
-        playerAnimator.SetTrigger("Attack1");
+        //hitbox.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

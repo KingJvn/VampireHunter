@@ -3,12 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public InputActionReference attack;
     [SerializeField] private Weapon equippedWeapon;
-
-    private int comboStep = 0;
     private float lastAttackTime = 0f;
-    [SerializeField] private float comboResetTime = 1f;
-
     private Animator animator;
 
     private void Awake()
@@ -16,42 +13,30 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    public void OnAttack(InputAction.CallbackContext obj)
     {
-        if(Time.time - lastAttackTime > comboResetTime && comboStep > 0)
+        if (!obj.started || equippedWeapon == null) return;
+
+        if (equippedWeapon is MeleeWeapon)
         {
-            ResetCombo();
+
+            if (Time.time >= lastAttackTime + equippedWeapon.AttackCooldown)
+            {
+                lastAttackTime = Time.time;
+
+                animator.SetTrigger("Swing"); //trigger animation
+
+                equippedWeapon.Attack(); //trigger attack logic
+            }
         }
     }
 
-    public void OnAttack(InputValue value)
+    private void OnEnable()
     {
-        if (value.isPressed || equippedWeapon == null) return;
-
-        if(Time.time >= lastAttackTime + equippedWeapon.AttackCooldown)
-        {
-            if(equippedWeapon is MeleeWeapon)
-            {
-                comboStep++;
-                if (comboStep > 2) comboStep = 1;
-            }
-            else
-            {
-                comboStep = 1;
-            }
-
-            lastAttackTime = Time.time;
-
-            animator.SetInteger("ComboStep", comboStep);
-            animator.SetTrigger("Attack");
-
-            equippedWeapon.Attack();
-        }
+        attack.action.started += OnAttack;
     }
-
-    public void ResetCombo()
+    private void OnDisable()
     {
-        comboStep = 0;
-        animator.SetInteger("ComboStep", 0);
+        attack.action.started -= OnAttack;
     }
 }

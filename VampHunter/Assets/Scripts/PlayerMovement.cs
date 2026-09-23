@@ -4,28 +4,31 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
-    private PlayerHealth playerHealth; //for not letting player move when dead
     private Rigidbody2D rb;
-    private Vector2 movementInput;
+    private Vector2 moveDirection;
 
-    private void Start()
-    {
-        //playerHealth = GetComponent<PlayerHealth>();
-    }
+    public InputActionReference move;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    public void OnMove(InputValue value)
+    private void Update()
     {
-        //if (playerHealth.isDead) return;
-        movementInput = value.Get<Vector2>();
+        moveDirection = move.action.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = movementInput * speed;
+        rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+    }
+
+    private void OnEnable()
+    {
+        move.action.Enable();
+    }
+    private void OnDisable()
+    {
+        move.action.Disable();
     }
 }
