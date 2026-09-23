@@ -1688,14 +1688,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1088332674742762483, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 2
+    - target: {fileID: 1353683278646468107, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3575580123826057024, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: attack
-      value: 
-      objectReference: {fileID: 4087493638680961080, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
+    - target: {fileID: 1353683278646468107, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3575580123826057024, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
       propertyPath: equippedWeapon
       value: 
@@ -1740,14 +1740,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7436241686525233372, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: look
-      value: 
-      objectReference: {fileID: -4223081240517501360, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
-    - target: {fileID: 8111579200222490065, guid: 59fff0702c2aa0b499af5217b1a0ec53, type: 3}
-      propertyPath: move
-      value: 
-      objectReference: {fileID: 7621647137935382307, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

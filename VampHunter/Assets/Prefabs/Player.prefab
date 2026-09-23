@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
   m_Actions: {fileID: -944628639613478452, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -111,7 +111,23 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57349480-18e5-4cb3-a214-8c0cbf75ed79
+    m_ActionName: 'Gameplay/Attack[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5b8745d-7b2b-4d49-84d3-d0a5cd98ecd2
+    m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cab6b67b-91e3-4a1d-84f8-415f39cd958c
+    m_ActionName: 'Gameplay/Look[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db4fc118-1154-47db-9102-08fa327a9d20
+    m_ActionName: 'Gameplay/Sprint[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: MnK
   m_DefaultActionMap: Gameplay
@@ -129,7 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eed720cd5618244f872a719ac29aa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 2
+  walkSpeed: 2
+  sprintSpeed: 3.5
+  move: {fileID: 7621647137935382307, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
+  sprint: {fileID: -115466142991972390, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
 --- !u!114 &7436241686525233372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cb70ec200d62c4a886c8c417e853fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRotation
+  look: {fileID: -4223081240517501360, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
 --- !u!114 &3575580123826057024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e350bb5d7a7b864f89ef2dd6f26225e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  attack: {fileID: 4087493638680961080, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
   equippedWeapon: {fileID: 0}
-  comboResetTime: 1
 --- !u!1 &4068452595445165851
 GameObject:
   m_ObjectHideFlags: 0
