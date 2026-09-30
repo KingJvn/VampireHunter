@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a33d56512cfd94ab859dd4f69f2b7b, type: 3}
   m_Name: Siilver Sword
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: 
-  icon: {fileID: 0}
-  maxStackSize: 0
-  itemPrefab: {fileID: 0}
+  itemName: Silver Sword
+  icon: {fileID: -3753825769889500098, guid: d1fda832b90c1db44afc90fa8acd1776, type: 3}
+  maxStackSize: 1
+  itemPrefab: {fileID: 5564712326788019354, guid: 4a3647be53e608347b3e911d5f93e8dc, type: 3}
   handItemPrefab: {fileID: 0}
