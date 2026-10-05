@@ -209,7 +209,7 @@ public class Inventory : MonoBehaviour
 
     private void HandleHotBarSelection()
     {
-        for(int i = 0; i < 6; i++) //TODO: change number when updating hotbar slot amount
+        for(int i = 0; i < 3; i++) //TODO: change number when updating hotbar slot amount
         {
             if(Input.GetKeyDown((i + 1).ToString()))
             {

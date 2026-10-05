@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8111579200222490065}
   - component: {fileID: 7436241686525233372}
   - component: {fileID: 3575580123826057024}
+  - component: {fileID: 7025859213134421298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -177,6 +178,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   attack: {fileID: 4087493638680961080, guid: bddc6c6758ea88e4d9eec1c3b8b5c1d7, type: 3}
   equippedWeapon: {fileID: 0}
+--- !u!114 &7025859213134421298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177631233148916022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff4f69a1beced34c8ae5dc16c80abdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  hotbarObj: {fileID: 0}
+  inventorySlotParent: {fileID: 0}
+  container: {fileID: 0}
+  dragIcon: {fileID: 0}
+  equippedOpacity: 0.9
+  normalOpacity: 0.58
 --- !u!1 &4068452595445165851
 GameObject:
   m_ObjectHideFlags: 0
