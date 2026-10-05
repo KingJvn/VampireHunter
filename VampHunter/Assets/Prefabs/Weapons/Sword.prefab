@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1957588236806470906}
   - component: {fileID: 5119918381685164099}
   - component: {fileID: 1058525957604043776}
+  - component: {fileID: 314019982845749131}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -234,3 +235,17 @@ MonoBehaviour:
   weaponName: Silver Sword
   damage: 10
   attackCooldown: 0.5
+--- !u!114 &314019982845749131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564712326788019354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804558fa3e5aed648a55efc94227038c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  item: {fileID: 11400000, guid: b6dd89824dc850e4a93c8ac1701a75e9, type: 2}
+  amount: 1

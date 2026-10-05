@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3a33d56512cfd94ab859dd4f69f2b7b, type: 3}
-  m_Name: Siilver Sword
+  m_Name: Silver Sword
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Silver Sword
   icon: {fileID: -3753825769889500098, guid: d1fda832b90c1db44afc90fa8acd1776, type: 3}

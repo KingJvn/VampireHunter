@@ -8,10 +8,13 @@ public class Inventory : MonoBehaviour
     public GameObject container;
     public Image dragIcon;
 
+    private int equippedHotbarIndex = 0; //0-3, so 4 slots
+    public float equippedOpacity = 0.9f;
+    public float normalOpacity = 0.58f;
+
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
-
 
     private Slot dragSlot = null;
     private bool isDragging = false;
@@ -35,6 +38,9 @@ public class Inventory : MonoBehaviour
         StartDrag();
         UpdateDragItemPosition();
         EndDrag();
+
+        HandleHotBarSelection();
+        UpdateHotBarOpacity();
     }
 
     public void AddItem(ItemSO itemToAdd, int amount)
@@ -186,6 +192,30 @@ public class Inventory : MonoBehaviour
         if(isDragging)
         {
             dragIcon.transform.position = Input.mousePosition;
+        }
+    }
+
+    private void UpdateHotBarOpacity()
+    {
+        for(int i = 0; i < hotbarSlots.Count; i++)
+        {
+            Image icon = hotbarSlots[i].GetComponent<Image>();
+            if(icon != null)
+            {
+                icon.color = (i == equippedHotbarIndex) ? new Color(1, 1, 1, equippedOpacity) : new Color(1, 1, 1, normalOpacity);
+            }
+        }
+    }
+
+    private void HandleHotBarSelection()
+    {
+        for(int i = 0; i < 6; i++) //TODO: change number when updating hotbar slot amount
+        {
+            if(Input.GetKeyDown((i + 1).ToString()))
+            {
+                equippedHotbarIndex = i;
+                UpdateHotBarOpacity();
+            }
         }
     }
 
