@@ -5,8 +5,9 @@ public class Inventory : MonoBehaviour
 {
     public GameObject hotbarObj;
     public GameObject inventorySlotParent;
-
+    public GameObject container;
     public Image dragIcon;
+
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
@@ -24,6 +25,13 @@ public class Inventory : MonoBehaviour
     }
     void Update()
     {
+        //temp
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            container.SetActive(!container.activeInHierarchy);
+
+        }
+
         StartDrag();
         UpdateDragItemPosition();
         EndDrag();
@@ -180,4 +188,5 @@ public class Inventory : MonoBehaviour
             dragIcon.transform.position = Input.mousePosition;
         }
     }
+
 }

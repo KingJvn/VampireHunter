@@ -3396,6 +3396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   hotbarObj: {fileID: 216473769}
   inventorySlotParent: {fileID: 2068418206}
+  container: {fileID: 1577711488}
   dragIcon: {fileID: 1301304160}
 --- !u!1001 &3754698613105472860
 PrefabInstance:
