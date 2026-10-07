@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
+    [Header("Inventory UI")]
     public GameObject hotbarObj;
     public GameObject inventorySlotParent;
     public GameObject container;
     public Image dragIcon;
+
+    [Header("Loot UI")]
+    public GameObject lootContainer;
+    public GameObject lootContainerSlotParent;
 
     private int equippedHotbarIndex = 0; //0-3, so 4 slots
     public float equippedOpacity = 0.9f;

@@ -8,6 +8,7 @@ interface IInteractable
 public class Interactor : MonoBehaviour
 {
     public InputActionReference interact;
+    public Inventory inventory;
     [SerializeField] private float interactRange = 1.5f;
     private Camera cam;
     private InteractableOutline hovered;

@@ -6,5 +6,11 @@ public class ItemSO : ScriptableObject
     public Sprite icon;
     public int maxStackSize;
     public GameObject itemPrefab;
-    public GameObject handItemPrefab;
+    public int dropChance;
+
+    public ItemSO(string lootName, int dropChance)
+    {
+        this.itemName = lootName;
+        this.dropChance = dropChance;
+    }
 }
