@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 interface IInteractable
 {
+    bool CanInteract => true;
     public void Interact(Interactor interactor);
 }
 public class Interactor : MonoBehaviour
@@ -52,6 +53,12 @@ public class Interactor : MonoBehaviour
 
         interactable = hit.GetComponentInParent<IInteractable>();
         if (interactable == null) return false;
+
+        if (!interactable.CanInteract)
+        {
+            interactable = null;
+            return false;
+        }
 
         // check if it's close to the player
         Vector2 closestPoint = hit.ClosestPoint(transform.position);
